@@ -6,7 +6,7 @@ import playsound
 from gtts import gTTS
 from selenium import webdriver
 
-wolfram_id = "3X5UQU-TK9ULVQTVE"
+wolfram_id = "ENTER YOURD ID"
 num = 1
 shutdown = ["bye","nothing","sleep","shut up","exit"]
 
