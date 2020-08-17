@@ -1,4 +1,5 @@
 import os
+import sys
 import speech_recognition as sr
 import wolframalpha
 import playsound
@@ -28,7 +29,7 @@ def speech_to_text():
         #winry_speaks("What would you like me to do ? ")
         print("Speak....")
         r.adjust_for_ambient_noise(source)
-        audio = r.listen(source,phrase_time_limit=2)
+        audio = r.listen(source,phrase_time_limit=5)
 
     #winry_speaks("Okay, thats enough now.")
 
@@ -40,7 +41,7 @@ def speech_to_text():
         return text
     except:
         winry_speaks("I didn't quite get you, please repeat. ")
-        return "0"
+        return 
 
 def get_name():
     name = speech_to_text()
@@ -52,11 +53,10 @@ def get_name():
 
 def process_request(request,name):
     try:
-        if "search" in request or "play" in request:
+        if("search" in request or "play" in request):
             search_web(request)
-
-        elif "calculate" in request.lower(): 
-
+            return
+        elif("calculate" in request.lower()):
             app_id =  wolfram_id
             client = wolframalpha.Client(app_id) 
   
@@ -66,13 +66,7 @@ def process_request(request,name):
             answer = next(res.results).text 
             winry_speaks("The answer is " + answer) 
             return
-  
-        elif 'open' in request: 
-            open_application(request.lower())  
-            return
-  
         else: 
-  
             winry_speaks("I can search the web for you, Do you want to continue?") 
             ans = speech_to_text() 
             if 'yes' in str(ans) or 'yeah' in str(ans): 
@@ -93,59 +87,47 @@ def search_web(request):
     driver.maximize_window() 
   
     if 'youtube' in request.lower(): 
-  
         winry_speaks("Opening in youtube") 
         indx = request.lower().split().index('youtube') 
         query = request.split()[indx + 1:] 
-        driver.get("http://www.youtube.com/results?search_query =" + '+'.join(query)) 
+        driver.get("http://www.youtube.com/results?search_query=" + '+'.join(query)) 
         return
-  
     elif 'wikipedia' in request.lower(): 
-  
         winry_speaks("Opening Wikipedia") 
         indx = request.lower().split().index('wikipedia') 
         query = request.split()[indx + 1:] 
         driver.get("https://en.wikipedia.org/wiki/" + '_'.join(query)) 
         return
-  
     else: 
-  
         if 'google' in request: 
-  
             indx = request.lower().split().index('google') 
             query = request.split()[indx + 1:] 
-            driver.get("https://www.google.com/search?q =" + '+'.join(query)) 
-  
+            driver.get("https://www.google.com/search?q=" + '+'.join(query)) 
         elif 'search' in request: 
-  
             indx = request.lower().split().index('google') 
             query = request.split()[indx + 1:] 
-            driver.get("https://www.google.com/search?q =" + '+'.join(query)) 
-  
+            driver.get("https://www.google.com/search?q=" + '+'.join(query)) 
         else: 
-  
-            driver.get("https://www.google.com/search?q =" + '+'.join(request.split())) 
+            driver.get("https://www.google.com/search?q=" + '+'.join(request.split())) 
   
         return
 
 
 if __name__=="__main__":
 
-    winry_speaks("Hi my name is Winry, what is yours ? ")
-    name = get_name()
-
+    '''winry_speaks("Hi my name is Winry, what is yours ? ")
+    name = get_name()'''
+    name = "0"
     while(1):
-        print(name)
         winry_speaks("What can i do for you today, "+name)
         request = speech_to_text()
 
         if(request == "0"):
-            winry_speaks("I didn't quite get you, please repeat. ")
+            winry_speaks("I didn't quite get your name, please repeat. ")
             continue
-        if(str(request.lower()) in shutdown):
-            winry_speaks("Okay, I will "+str(request)+", "+name)
-            break
-
+        elif(str(request.lower()) in shutdown):
+            winry_speaks("Goodbye, "+name)
+            sys.exit()
         process_request(request,name)
     
 

@@ -82,3 +82,39 @@ console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Err
 1597668574104	Marionette	WARN	TLS certificate errors will be ignored for this session
 JavaScript error: resource://gre/modules/URIFixup.jsm, line 281: NS_ERROR_FAILURE: Should pass a non-null uri
 1597668617621	Marionette	INFO	Stopped listening on port 35977
+1597673670597	Marionette	INFO	Stopped listening on port 45847
+1597674441650	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.WfsqWUFsO5Qm"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1597674448025	Marionette	INFO	Listening on port 36037
+1597674448078	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 281: NS_ERROR_FAILURE: Should pass a non-null uri
+1597674693527	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.MOFxrG0guxFS"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1597674699900	Marionette	INFO	Listening on port 41631
+1597674699977	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 281: NS_ERROR_FAILURE: Should pass a non-null uri
+1597674790027	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.Onfggz6N17wZ"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1597674797410	Marionette	INFO	Listening on port 44295
+1597674797454	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 281: NS_ERROR_FAILURE: Should pass a non-null uri
+JavaScript error: , line 0: UnknownError: The operation failed for reasons unrelated to the database itself and not covered by any other error code.
+1597675194939	Marionette	INFO	Stopped listening on port 44661
+1597675243259	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.3h6pyFX39jiI"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1597675249934	Marionette	INFO	Listening on port 37773
+1597675249986	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 281: NS_ERROR_FAILURE: Should pass a non-null uri
+1597675264177	Marionette	INFO	Stopped listening on port 37773
+1597675486974	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.a1zwC8WGVTa6"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1597675493738	Marionette	INFO	Listening on port 35641
+1597675493838	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 281: NS_ERROR_FAILURE: Should pass a non-null uri
+1597676040441	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.wYbwNCbyoSMA"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1597676046911	Marionette	INFO	Listening on port 37905
+1597676046971	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 281: NS_ERROR_FAILURE: Should pass a non-null uri
+JavaScript error: , line 0: UnknownError: The operation failed for reasons unrelated to the database itself and not covered by any other error code.
+1597676101622	Marionette	INFO	Stopped listening on port 37905
