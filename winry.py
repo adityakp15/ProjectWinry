@@ -6,7 +6,7 @@ import playsound
 from gtts import gTTS
 from selenium import webdriver
 
-wolfram_id = "Enter your id"
+wolfram_id = "3X5UQU-TK9ULVQTVE"
 num = 1
 shutdown = ["bye","nothing","sleep","shut up","exit"]
 
@@ -115,8 +115,8 @@ def search_web(request):
 
 if __name__=="__main__":
 
-    winry_speaks("Hi my name is Winry, what is yours ? ")
-    name = get_name()
+    '''winry_speaks("Hi my name is Winry, what is yours ? ")
+    name = get_name()'''
     while(1):
         winry_speaks("What can i do for you today, "+name)
         request = speech_to_text()
