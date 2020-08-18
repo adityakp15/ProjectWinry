@@ -6,7 +6,7 @@ import playsound
 from gtts import gTTS
 from selenium import webdriver
 
-wolfram_id = "ENTER YOURD ID"
+wolfram_id = "Enter your id"
 num = 1
 shutdown = ["bye","nothing","sleep","shut up","exit"]
 
@@ -40,8 +40,8 @@ def speech_to_text():
         print("Processing....")
         return text
     except:
-        winry_speaks("I didn't quite get you, please repeat. ")
-        return 
+        winry_speaks("I didn't quite get you, so i'll call you 0. ")
+        return "0"
 
 def get_name():
     name = speech_to_text()
@@ -117,7 +117,6 @@ if __name__=="__main__":
 
     winry_speaks("Hi my name is Winry, what is yours ? ")
     name = get_name()
-    #name = "0"
     while(1):
         winry_speaks("What can i do for you today, "+name)
         request = speech_to_text()
